@@ -1,5 +1,5 @@
 # BinarySearchTree
-##Running solution locally:
+## Running solution locally:
 1. Download solution & open with Visual Studio Code or preferred editor
 2. In the folder where package.json is located (BinarySearchTree-main folder if you are downloading the .zip file version of this project) and run 'npm install' in terminal. 
 This will install all needed dependencies for this project. 
