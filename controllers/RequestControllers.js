@@ -17,7 +17,8 @@ function RequestController() {
      return res.status(response.status).json(response);
     }
     const data = insertInTree(body.value, body.tree);
-    return res.status(buildResponse(data).status).json(buildResponse(data));
+    res.status(buildResponse(data).status)
+    return res.json(buildResponse(data));
   }
   
   return { post };

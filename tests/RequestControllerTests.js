@@ -12,7 +12,7 @@ describe('Request Controller Tests:', () => {
     it('should create a tree value 5, left and right null ', () => {
       //Arrange
       const req = {body: {value: 5,tree: null}};
-      const res = {status: sinon.spy(),json: sinon.spy()}
+      const res = {status: sinon.spy(), json: sinon.spy()}
       //Act
       const controller = requestController();
       controller.post(req, res)
