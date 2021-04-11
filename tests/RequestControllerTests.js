@@ -1,6 +1,7 @@
 const should = require('should');
 const request = require('supertest');
 const sinon = require('sinon');
+
 const requestController = require('../controllers/RequestControllers').RequestController;
 const application = require('../app').app;
 const testAgent = request.agent(application);

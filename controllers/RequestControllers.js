@@ -7,6 +7,8 @@ const validation = Utils.TreeInsertValidation;
 const buildResponse = ApiResponse.ApiResponse;
 
 function RequestController() {
+  
+  //post request function
   function post(req, res) {
     const body = req.body;
     const isInvalidRequest = validation(body);
@@ -18,10 +20,8 @@ function RequestController() {
     res.status(reponse.status);
     return res.json(reponse);
   }
-  function get(req, res) {
-    return res.json(buildResponse('This is get request demo'));
-  }
-  return { post, get};
+  
+  return { post };
 }
 
 module.exports = {

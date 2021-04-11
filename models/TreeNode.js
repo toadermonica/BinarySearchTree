@@ -1,3 +1,7 @@
+/**
+ * Function that acts as a tree node model
+ * @param {value} -- value of node  
+ */
 function TreeNode(value)
 {
     const newTreeNode = {
