@@ -7,18 +7,17 @@ const validation = Utils.TreeInsertValidation;
 const buildResponse = ApiResponse.ApiResponse;
 
 function RequestController() {
-  
-  //post request function
+
   function post(req, res) {
     const body = req.body;
     const isInvalidRequest = validation(body);
-    if (isInvalidRequest) {
-      return res.json(buildResponse(isInvalidRequest));
+    if (isInvalidRequest)
+    {
+     const response = buildResponse(isInvalidRequest);
+     return res.status(response.status).json(response);
     }
     const data = insertInTree(body.value, body.tree);
-    const reponse = buildResponse(data);
-    res.status(reponse.status);
-    return res.json(reponse);
+    return res.status(buildResponse(data).status).json(buildResponse(data));
   }
   
   return { post };
